@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Value Serif";
+  src: url("./valueserif/value-serif-bold.woff2") format("woff2"),
+    url("./valueserif//value-serif-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

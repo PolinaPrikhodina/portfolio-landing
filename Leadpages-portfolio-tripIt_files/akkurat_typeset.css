@@ -1,0 +1,122 @@
+/*
+ * Legal Disclaimer
+ *
+ * These Fonts are licensed only for use on these domains and their subdomains:
+ * leadpages.net, center.com
+ *
+ * It is illegal to download or use them on other websites.
+ *
+ * While the @font-face statements below may be modified by the client, this
+ * disclaimer may not be removed.
+ *
+ * Lineto.com, 2016
+ */
+
+
+/*
+ *
+ * INSTRUCTIONS
+ *
+ * Copy the Legal Disclaimer and the @font-faces statements to your regular CSS file.
+ * The fonts folder(s) should be placed relative to the regular CSS file.
+ *
+ * You can use either the complete or subsetted fonts:
+ * If you don’t require the entire range of characters, you can use the smaller, subsetted webfonts instead.
+ * See "Glyphs & Languages" for an overview of the characters in the *_subsetted.html file in the root directory of this package.
+ *
+ */
+
+
+/* Complete */
+
+/* LEADPAGES NOTE:
+The below rules we're rewritten to
+handle font-weight and font-style
+original supplied was not.
+4-19-2016 JJ */
+
+@font-face {
+    font-family: "Akkurat";
+    font-display: auto;
+    src:url("lineto-akkurat-light.eot");
+    src:url("lineto-akkurat-light.eot?#iefix") format("embedded-opentype"),
+        url("lineto-akkurat-light.woff2") format("woff2"),
+        url("lineto-akkurat-light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Akkurat";
+    font-display: auto;
+    src:url("lineto-akkurat-regular.eot");
+    src:url("lineto-akkurat-regular.eot?#iefix") format("embedded-opentype"),
+        url("lineto-akkurat-regular.woff2") format("woff2"),
+        url("lineto-akkurat-regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Akkurat";
+    font-display: auto;
+    src:url("lineto-akkurat-lightitalic.eot");
+    src:url("lineto-akkurat-lightitalic.eot?#iefix") format("embedded-opentype"),
+        url("lineto-akkurat-lightitalic.woff2") format("woff2"),
+        url("lineto-akkurat-lightitalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Akkurat";
+    font-display: auto;
+    src:url("lineto-akkurat-italic.eot");
+    src:url("lineto-akkurat-italic.eot?#iefix") format("embedded-opentype"),
+        url("lineto-akkurat-italic.woff2") format("woff2"),
+        url("lineto-akkurat-italic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Akkurat";
+    font-display: auto;
+    src:url("lineto-akkurat-bold.eot");
+    src:url("lineto-akkurat-bold.eot?#iefix") format("embedded-opentype"),
+        url("lineto-akkurat-bold.woff2") format("woff2"),
+        url("lineto-akkurat-bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Akkurat";
+    font-display: auto;
+    src:url("lineto-akkurat-bolditalic.eot");
+    src:url("lineto-akkurat-bolditalic.eot?#iefix") format("embedded-opentype"),
+        url("lineto-akkurat-bolditalic.woff2") format("woff2"),
+        url("lineto-akkurat-bolditalic.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+// STRONG AND EM TAGS
+em {
+  font-family: "Akkurat";
+  src:url("lineto-akkurat-italic.eot");
+  src:url("lineto-akkurat-italic.eot?#iefix") format("embedded-opentype"),
+      url("lineto-akkurat-italic.woff2") format("woff2"),
+      url("lineto-akkurat-italic.woff") format("woff");
+  font-style: italic;
+}
+
+strong {
+  font-family: "Akkurat";
+  src:url("lineto-akkurat-bold.eot");
+  src:url("lineto-akkurat-bold.eot?#iefix") format("embedded-opentype"),
+      url("lineto-akkurat-bold.woff2") format("woff2"),
+      url("lineto-akkurat-bold.woff") format("woff");
+  font-weight: 700;
+}

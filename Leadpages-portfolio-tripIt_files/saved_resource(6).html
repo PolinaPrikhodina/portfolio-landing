@@ -1,0 +1,1877 @@
+
+<!-- saved from url=(0011)about:blank -->
+<html lang="en" style="--line-color: #000000;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style nonce="undefined">*:focus,
+*:focus-visible {
+  outline: none;
+}
+/* IE10+ style for beacon */
+@media screen and (-ms-high-contrast: active),
+  screen and (-ms-high-contrast: none) {
+  .rotated#userpilot-resource-centre-beacon {
+    top: 0px !important;
+    bottom: 0px !important;
+    transform: rotate(180deg) !important;
+    left: 0px !important;
+    transform-origin: center;
+    width: 48px;
+    box-sizing: border-box;
+  }
+  .rotated#userpilot-resource-centre-beacon #beacon-container {
+    transform: rotate(90deg) !important;
+  }
+  .rotated#userpilot-resource-centre-beacon #beacon-icon {
+    transform: none !important;
+  }
+  #userpilot-resource-centre-beacon #beacon-text {
+    display: inline;
+  }
+}
+
+#width-100 {
+  width: 100%;
+}
+
+.loader {
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  animation: l1 1s infinite linear;
+  background-size: 300% 100% !important;
+}
+
+@keyframes l1 {
+  0% {
+    background-position: right;
+  }
+}
+
+#userpilot-resource-centre
+  .userpilot-resource-centre-container
+  #widget-content
+  #main-content::-webkit-scrollbar {
+  display: none;
+}
+
+#userpilot-resource-centre-beacon {
+  position: fixed;
+  background-color: #1f2532;
+  cursor: pointer;
+  z-index: 4;
+  padding: 7px 15px;
+  border: none;
+  border-radius: 32px;
+  box-sizing: content-box;
+  font-size: 13px;
+  white-space: nowrap;
+  opacity: 1;
+  transition: opacity 0.3s linear;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#userpilot-resource-centre-beacon.hidden {
+  display: none !important;
+}
+
+#userpilot-resource-centre-beacon #beacon-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  position: relative;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+#userpilot-resource-centre-beacon.rotated {
+  padding: 15px 7px;
+  writing-mode: vertical-lr;
+}
+
+#userpilot-resource-centre-beacon.rotated #beacon-icon {
+  transform: rotate(90deg);
+  margin: 0px 0px 5px 0px;
+}
+
+#userpilot-resource-centre-beacon.no-rotation #beacon-container {
+  transform: rotate(0deg) !important;
+}
+
+#userpilot-resource-centre-beacon.icon {
+  padding: 10px 10px;
+}
+
+#userpilot-resource-centre-beacon #beacon-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: bold;
+}
+
+#userpilot-resource-centre-beacon.rotated #beacon-container {
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+}
+
+#userpilot-resource-centre-beacon.text-icon > div > div {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0px 5px 0px 0px;
+}
+
+#userpilot-resource-centre-beacon.text-icon > div > div:first-child {
+  margin-left: 0px;
+}
+
+#userpilot-resource-centre-beacon.text-icon > div > div:last-child {
+  margin-right: 0px;
+}
+
+#userpilot-resource-centre-beacon svg,
+#userpilot-resource-centre-beacon img {
+  height: 20px;
+  width: auto;
+
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+}
+
+#userpilot-resource-centre-beacon.text-icon svg,
+#userpilot-resource-centre-beacon.text-icon img {
+  height: 20px;
+  width: auto;
+}
+
+#userpilot-resource-centre-beacon.icon-circle {
+  border-radius: 50%;
+  padding: 10px;
+}
+
+#userpilot-resource-centre-beacon.icon-square {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#userpilot-resource-centre-beacon.right-side {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+#userpilot-resource-centre-beacon.left-side {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+#userpilot-resource-centre-beacon.icon-circle.rotated.right-side {
+  padding: 10px !important;
+}
+
+#userpilot-resource-centre-beacon.icon-square.right-side {
+  padding: 10px !important;
+}
+
+#userpilot-resource-centre-beacon.icon-circle.rotated.left-side {
+  padding: 10px !important;
+}
+
+#userpilot-resource-centre-beacon.icon-square.left-side {
+  padding: 10px !important;
+}
+
+#userpilot-resource-centre-beacon.icon-circle #beacon-icon {
+  margin: 0 !important;
+}
+
+#userpilot-resource-centre-beacon.icon-square #beacon-icon {
+  margin: 0 !important;
+}
+
+#userpilot-resource-centre-beacon.beacon-icon svg g {
+  fill: #ffffff;
+}
+
+#userpilot-resource-centre {
+  opacity: 0;
+  z-index: 5;
+  height: 0px;
+  width: 420px;
+  display: block;
+  font-size: 14px;
+  position: fixed;
+  overflow: hidden;
+  max-height: 1000px;
+  visibility: hidden;
+  text-align: center;
+  border-radius: 12px;
+  transform-origin: right top;
+  transform: scale(0.8) translateY(74px);
+  box-shadow: rgb(0 0 0 / 10%) 5px 0px 30px 10px;
+  transition: opacity 0.1s ease-out, transform 0.1s ease-out,
+    visibility 0.1s ease-out, width 0.1s ease-out;
+}
+
+#userpilot-resource-centre[position="right_top"] {
+  top: 7.5px;
+  right: 7.5px;
+}
+
+#userpilot-resource-centre[position="right_bottom"] {
+  right: 7.5px;
+  bottom: 7.5px;
+  transform-origin: right bottom;
+}
+
+#userpilot-resource-centre[position="right"] {
+  top: 0px;
+  bottom: 0px;
+  right: 7.5px;
+  margin: auto;
+  transform-origin: right center;
+}
+
+#userpilot-resource-centre[position="left_bottom"] {
+  left: 7.5px;
+  bottom: 7.5px;
+  transform-origin: left bottom;
+}
+
+#userpilot-resource-centre[position="left"] {
+  top: 0px;
+  left: 7.5px;
+  bottom: 0px;
+  margin: auto;
+  transform-origin: left center;
+}
+
+#userpilot-resource-centre[position="left_top"] {
+  top: 7.5px;
+  left: 7.5px;
+  transform-origin: left top;
+}
+
+#userpilot-resource-centre[position="bottom_right"],
+#userpilot-resource-centre[position="bottom"] {
+  right: 7.5px;
+  bottom: 7.5px;
+  transform-origin: bottom right;
+}
+
+#userpilot-resource-centre[position="bottom_left"] {
+  left: 7.5px;
+  bottom: 7.5px;
+  transform-origin: bottom left;
+}
+
+#userpilot-resource-centre[position="top_right"],
+#userpilot-resource-centre[position="top"] {
+  right: 7.5px;
+  top: 7.5px;
+  transform-origin: top right;
+}
+
+#userpilot-resource-centre[position="top_left"] {
+  left: 7.5px;
+  top: 7.5px;
+  transform-origin: top left;
+}
+
+#userpilot-resource-centre.expanded {
+  width: 600px;
+}
+
+#userpilot-resource-centre:not(.expanded)
+  .widget-header#header-news
+  #expand
+  svg:last-child {
+  display: none;
+}
+
+#userpilot-resource-centre.expanded
+  .widget-header#header-news
+  #expand
+  svg:first-child {
+  display: none;
+}
+
+.userpilot-resource-centre-container {
+  width: 100%;
+  max-height: 700px;
+}
+
+.userpilot-resource-centre-container:not(#search) {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.userpilot-resource-centre-container:not(#search).active {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.widget-header#header-articles #back-to-main {
+  z-index: 1;
+}
+
+.userpilot-resource-centre-container#search {
+  visibility: hidden;
+}
+
+.userpilot-resource-centre-container#search.active {
+  visibility: visible;
+}
+
+#userpilot-resource-centre[dir="left"] {
+  right: unset;
+}
+
+#userpilot-resource-centre[theme="light"] {
+  background-color: #ffffff;
+  color: #232323;
+}
+
+#userpilot-resource-centre[theme="dark"] {
+  background-color: #212121;
+  color: #ffffff;
+}
+
+#userpilot-resource-centre .widget-header {
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+  width: 100%;
+  text-align: left;
+  visibility: hidden;
+  position: absolute;
+  box-sizing: border-box;
+  padding: 24px;
+  transition: height 0.2s linear;
+  box-shadow: 0px 0px 59px -25px gainsboro;
+}
+
+#userpilot-resource-centre
+  .widget-header#header-news.active.announcement-header {
+  padding: 30px 24px;
+}
+
+#userpilot-resource-centre .widget-header#header-home {
+  transition: padding-bottom 0.3s;
+}
+
+#userpilot-resource-centre:not(.submodule-open)
+  .widget-header#header-home.active,
+#userpilot-resource-centre .widget-header#header-articles.active-article {
+  padding: 24px;
+}
+
+#userpilot-resource-centre .widget-header#header-articles {
+  box-shadow: 0px 0px 59px -35px gainsboro;
+}
+
+#userpilot-resource-centre .widget-header.active {
+  opacity: 1;
+  position: relative;
+  visibility: visible;
+}
+
+#userpilot-resource-centre .widget-header.active-article div#widget-close {
+  display: none;
+}
+
+#userpilot-resource-centre .widget-header.active-article div#back-to-main {
+  top: -17px;
+}
+
+#userpilot-resource-centre .widget-header.active-article .header-text {
+  display: none !important;
+}
+
+#userpilot-resource-centre .header-text {
+  width: 100%;
+  position: relative;
+}
+
+#userpilot-resource-centre .row.announcement-entry {
+  padding: 0px;
+  overflow: hidden;
+  border-radius: 9px;
+  margin-bottom: 15px;
+  flex-direction: column;
+  width: calc(100% - 48px);
+  border: 1px solid #d3d3d6;
+}
+
+#userpilot-resource-centre .row.announcement-entry:first-child {
+  margin-top: 24px;
+}
+
+#userpilot-resource-centre .row.announcement-entry .entry-icon-container {
+  width: 100%;
+  max-height: 140px;
+}
+
+#userpilot-resource-centre
+  .row.announcement-entry
+  .entry-icon-container
+  .entry-icon {
+  width: 100%;
+  height: 0px;
+  display: block;
+  background-size: cover !important;
+  background-position: 50% !important;
+}
+
+#userpilot-resource-centre
+  .row.announcement-entry
+  .entry-icon-container
+  .entry-icon[style*="background-image"] {
+  height: 140px;
+}
+
+#userpilot-resource-centre .row.announcement-entry .entry-text {
+  padding: 16px;
+}
+
+#userpilot-resource-centre .row.announcement-full-entry {
+  top: 0px;
+  left: 0px;
+  opacity: 1;
+  opacity: 0;
+  height: 100%;
+  padding: 0px;
+  cursor: initial;
+  visibility: hidden;
+  position: absolute;
+  background: white;
+  flex-direction: column;
+  transition: opacity 0.1s ease-out, visibility 0.1s ease-out;
+}
+
+#userpilot-resource-centre
+  .row.announcement-full-entry
+  .entry-text
+  .entry-info {
+  width: 100%;
+  display: flex;
+  color: #434345;
+  font-size: 12px;
+  margin-top: 16px;
+  align-items: center;
+}
+
+#userpilot-resource-centre .row.announcement-full-entry .entry-info * {
+  font-size: inherit;
+}
+
+#userpilot-resource-centre .row.announcement-full-entry .entry-author {
+  display: inline-flex;
+  align-content: center;
+  align-items: center;
+}
+
+#userpilot-resource-centre .row.announcement-full-entry .entry-author-icon {
+  width: 25px;
+  height: 25px;
+  padding: 0px;
+  color: white;
+  display: flex;
+  overflow: hidden;
+  background: none;
+  font-weight: bold;
+  margin-right: 5px;
+  border-radius: 6px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+#userpilot-resource-centre .row.announcement-full-entry .entry-author-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+#userpilot-resource-centre .row.announcement-full-entry .entry-icon-container {
+  height: auto;
+  width: 100%;
+}
+
+#userpilot-resource-centre
+  .row.announcement-full-entry
+  .entry-icon-container
+  .entry-icon {
+  background-size: cover !important;
+  background-position: 50% !important;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#userpilot-resource-centre
+  .row.announcement-full-entry
+  .entry-icon-container
+  .entry-icon
+  img {
+  width: 100%;
+  height: auto;
+}
+
+#userpilot-resource-centre .row.announcement-full-entry .entry-text {
+  padding: 16px 24px;
+}
+
+#userpilot-resource-centre
+  .row.announcement-full-entry
+  .entry-text
+  .entry-title {
+  font-size: 20px;
+  color: inherit;
+}
+
+#userpilot-resource-centre
+  .row.announcement-full-entry
+  .entry-text
+  .entry-content {
+  width: 100%;
+}
+
+div#userpilot-resource-centre.submodule-open.checklist-module .widget-header {
+  padding: 29px 24px 53px;
+  min-height: 0px;
+}
+
+.widget-header#header-home #widget-header-blur {
+  left: -10%;
+  width: 120%;
+  content: "";
+  display: none;
+  height: 140px;
+  bottom: -100px;
+  filter: blur(18px);
+  position: absolute;
+  background: white;
+  pointer-events: none;
+}
+
+div#userpilot-resource-centre.submodule-open
+  .widget-header
+  #widget-header-blur {
+  display: none;
+}
+
+#userpilot-resource-centre.submodule-open .widget-header#header-home {
+  padding: 16px 24px;
+}
+
+#userpilot-resource-centre .widget-header #header-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+}
+
+#userpilot-resource-centre
+  .widget-header.active.announcement-header
+  #header-container,
+#userpilot-resource-centre.submodule-open
+  .widget-header#header-home
+  #header-container {
+  margin-bottom: 0px;
+}
+
+#userpilot-resource-centre.submodule-open.checklist-module
+  .widget-header#header-home
+  #header-container {
+  margin-bottom: 45px;
+}
+
+#userpilot-resource-centre .widget-header #header-container > * {
+  vertical-align: middle;
+  display: inline-block;
+}
+#userpilot-resource-centre .widget-header #header-container #header-icon {
+  margin: 0px;
+  display: none;
+  margin-bottom: 20px;
+  transform: rotate(-10deg);
+  transform-origin: bottom left;
+  transition: transform 0.2s linear;
+}
+
+#userpilot-resource-centre
+  .widget-header.active
+  #header-container
+  #header-icon {
+  transform: rotate(0deg);
+}
+
+#userpilot-resource-centre .widget-header #header-container #header-icon svg,
+#userpilot-resource-centre .widget-header #header-container #header-icon img {
+  height: 30px;
+}
+
+#userpilot-resource-centre #header-container #widget-close {
+  top: 6px;
+  z-index: 1;
+  right: 0px;
+  width: auto;
+  cursor: pointer;
+  position: absolute;
+}
+
+#userpilot-resource-centre #widget-close.hidden {
+  display: none;
+}
+
+#userpilot-resource-centre #widget-close svg {
+  height: 16px;
+  width: 16px;
+}
+
+#userpilot-resource-centre #widget-title {
+  letter-spacing: normal;
+  color: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+#userpilot-resource-centre .widget-header#header-home #widget-title,
+#userpilot-resource-centre .widget-header#header-home #widget-desc,
+.widget-header#header-home #resource-centre-widget-search #widget-search {
+  top: -10px;
+  opacity: 0;
+  position: relative;
+  transition: opacity 0.2s linear, top 0.2s linear;
+}
+
+#userpilot-resource-centre .widget-header#header-home.active #widget-title,
+#userpilot-resource-centre .widget-header#header-home.active #widget-desc,
+#userpilot-resource-centre
+  .widget-header#header-home.active
+  #resource-centre-widget-search
+  #widget-search {
+  top: 0px;
+  opacity: 1;
+}
+
+#userpilot-resource-centre .widget-header#header-home.active #widget-title {
+  padding-right: 24px;
+}
+
+div#userpilot-resource-centre.submodule-open.checklist-module #widget-title {
+  font-size: 18px;
+}
+
+#userpilot-resource-centre #widget-title.hidden {
+  display: none;
+}
+
+div#widget-headers {
+  width: 100%;
+}
+
+.userpilot-resource-centre-container#search:not(.active) .widget-header {
+  padding: 50px 24px;
+}
+
+.widget-header:not(#header-home) {
+  padding: 24px;
+}
+
+.widget-header:not(#header-home) #header-container {
+  text-align: center;
+}
+
+.widget-header:not(#header-home) #widget-title {
+  font-size: 20px;
+  padding: 0px 20px;
+}
+
+.widget-header:not(#header-home) #widget-desc {
+  font-size: 16px;
+}
+
+div#userpilot-resource-centre.submodule-open #widget-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+div#userpilot-resource-centre.submodule-open #widget-desc {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#userpilot-resource-centre #widget-tab {
+  letter-spacing: normal;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  display: none;
+}
+
+#userpilot-resource-centre #widget-tab.active {
+  display: block;
+}
+
+#userpilot-resource-centre #widget-desc {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  letter-spacing: -0.21px;
+  color: inherit;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+#userpilot-resource-centre #widget-desc.hidden,
+#userpilot-resource-centre #widget-desc:empty {
+  display: none;
+}
+
+/* #userpilot-resource-centre .row:first-child {
+  margin-top: 50px;
+} */
+
+#userpilot-resource-centre .row {
+  opacity: 0;
+  left: -10px;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+  padding: 12px 22px;
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+  display: inline-flex;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  transition: background-color 0.2s linear, left 0.2s linear, right 0.2s linear,
+    opacity 0.2s linear;
+}
+
+#userpilot-resource-centre .row.checklist-entry {
+  display: block;
+  padding: 0px;
+}
+
+#userpilot-resource-centre .row.icon-with-text {
+  flex-direction: row;
+}
+
+#userpilot-resource-centre .row.animate-in {
+  opacity: 1;
+  left: 0px;
+  right: initial;
+}
+
+#userpilot-resource-centre .row:not(.announcement-full-entry):hover {
+  background-color: currentColor;
+}
+
+#userpilot-resource-centre .row.hiddenModule {
+  display: none !important;
+}
+
+#resource-centre-widget-search {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 99;
+  display: block;
+  margin-top: 16px;
+}
+
+#resource-centre-widget-search.hidden-search {
+  display: none !important;
+}
+
+#resource-centre-widget-search.hidden {
+  left: -100%;
+  display: none;
+}
+
+#resource-centre-widget-search #widget-search {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  line-height: 19px;
+  border-radius: 10px;
+  font-family: inherit;
+  -webkit-appearance: none;
+  padding: 8px 15px 8px 40px;
+}
+
+#resource-centre-widget-search #widget-search::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 14px !important;
+}
+#resource-centre-widget-search #widget-search::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 14px !important;
+}
+#resource-centre-widget-search #widget-search:-ms-input-placeholder {
+  /* IE 10+ */
+  font-size: 14px !important;
+}
+#resource-centre-widget-search #widget-search:-moz-placeholder {
+  /* Firefox 18- */
+  font-size: 14px !important;
+}
+
+.widget-header.active-folder#header-articles div#resource-centre-widget-search,
+.widget-header.active-article#header-articles
+  div#resource-centre-widget-search {
+  display: none !important;
+}
+
+#userpilot-resource-centre[theme="dark"]
+  #resource-centre-widget-search
+  #widget-search {
+  background: #343434;
+  color: #ffffff;
+}
+
+#userpilot-resource-centre #search-icon {
+  position: absolute;
+  width: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 14px;
+}
+
+.userpilot-resource-centre-container#search div#main-content .search-results {
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+
+.userpilot-resource-centre-container#search
+  div#main-content
+  .search-results#articles {
+  min-height: 150px;
+}
+
+.userpilot-resource-centre-container#search
+  div#main-content
+  .search-results
+  .results {
+  width: 100%;
+  padding: 10px 0px;
+  text-align: center;
+  border-top: 1px solid gainsboro;
+}
+
+.userpilot-resource-centre-container#search
+  div#main-content
+  .search-results
+  .results:empty {
+  display: none;
+}
+.userpilot-resource-centre-container#search .entry-content {
+  color: black;
+  font-size: 14px;
+}
+
+#internal-search-results,
+#external-search-results {
+  text-align: left;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: -0.21px;
+  display: none;
+  color: #000;
+  opacity: 0.6;
+}
+#internal-search-results {
+  margin-top: 30px;
+}
+#spacing-placeholder {
+  margin-top: 0px;
+  display: block;
+}
+.search-disabled #spacing-placeholder {
+  display: none !important;
+}
+
+#userpilot-resource-centre[theme="light"] #search-results {
+  color: #6a6a6a;
+}
+
+#userpilot-resource-centre[theme="dark"] #search-results {
+  color: #ffffff;
+}
+
+#userpilot-resource-centre #search-results > span {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+#empty-results-page {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  margin-top: 25px;
+  padding: 0px 30px;
+  box-sizing: border-box;
+}
+
+#userpilot-resource-centre[theme="light"] #empty-results-page {
+  color: #ffffff;
+}
+
+#userpilot-resource-centre[theme="dark"] #empty-results-page {
+  color: #212121;
+}
+
+#empty-results-page > div > span:first-child {
+  display: block;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  display: inline-block;
+  width: 100%;
+  margin-top: 15px;
+}
+
+#userpilot-resource-centre[theme="light"]
+  #empty-results-page
+  > div
+  > span:first-child {
+  color: rgb(73, 80, 87);
+}
+
+#userpilot-resource-centre[theme="dark"]
+  #empty-results-page
+  > div
+  > span:first-child {
+  color: rgb(73, 80, 87);
+}
+
+#empty-results-page > div > span:last-child {
+  font-style: normal;
+  font-size: 14px;
+  display: block;
+  opacity: 0.6;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+#userpilot-resource-centre[theme="light"]
+  #empty-results-page
+  > div:nth-child(2)
+  > span:last-child {
+  color: #919191;
+}
+
+#userpilot-resource-centre[theme="dark"]
+  #empty-results-page
+  > div:nth-child(2)
+  > span:last-child {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+#empty-results-page #go-home {
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 8px 16px;
+  width: fit-content;
+  border-radius: 6px;
+  background: #5171e3;
+  margin: 12px auto 0px;
+}
+
+body {
+  margin: 0;
+}
+
+#userpilot-resource-centre-frame {
+  border: none;
+  position: absolute;
+}
+
+.row .entry-header {
+  margin-bottom: 8px;
+}
+
+.row .entry-header > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.row .entry-header .entry-emoji {
+  font-size: 24px;
+  color: initial;
+}
+
+#userpilot-resource-centre .row .entry-static-icon {
+  transition: rotate 0.2s linear;
+  width: 15px;
+  margin-left: 10px;
+}
+
+#userpilot-resource-centre .row .entry-static-icon:not(.entry-caret) {
+  display: none;
+}
+
+#userpilot-resource-centre .row .entry-static-icon > * {
+  float: right;
+}
+
+#userpilot-resource-centre .row.toggled .entry-static-icon {
+  rotate: 90deg;
+}
+
+
+#userpilot-resource-centre #main-content .row .entry-text,
+#userpilot-resource-centre #sub-modules .row .entry-text {
+  width: 100%;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.row .entry-content {
+  display: flex;
+  align-items: center;
+  padding: 12px 22px;
+}
+
+.row.announcement-full-entry .entry-content {
+  display: block;
+}
+
+.row .entry-title {
+  width: 100%;
+  font-size: inherit;
+  font-weight: 600;
+  position: relative;
+  overflow-wrap: break-word;
+}
+
+.row .entry-icon-container {
+  text-align: center;
+}
+
+.row .entry-icon-container .entry-emoji:empty,
+.row .entry-icon-container .entry-icon:empty {
+  display: none;
+}
+
+.row .entry-icon-container .entry-emoji,
+.row .entry-icon-container .entry-icon {
+  width: 26px;
+  margin-right: 20px;
+}
+
+#help-module .row .entry-icon-container .entry-icon {
+  height: 16px;
+  display: flex;
+  margin-right: 8px;
+  align-items: center;
+}
+
+#help-module .row .entry-icon-container .entry-icon:empty {
+  margin: 0px;
+  display: none;
+}
+
+.row .entry-icon-container .entry-icon img {
+  height: auto;
+  width: 26px;
+}
+
+.row .entry-icon-container .entry-emoji span {
+  color: initial;
+  line-height: 1;
+  font-size: 26px;
+}
+
+.row .entry-desc {
+  width: 100%;
+  opacity: 0.7;
+  color: inherit;
+  margin-top: 4px;
+  font-size: inherit;
+  font-weight: 400;
+  word-break: break-word;
+}
+.row.checklist-entry .entry-desc {
+  width: 100%;
+}
+
+#userpilot-resource-centre .row .entry-desc:empty {
+  display: none;
+  margin: 0px;
+}
+
+#userpilot-resource-centre .row.google-result .entry-title {
+  font-size: 14px;
+  width: 100%;
+}
+
+#userpilot-resource-centre .row.google-result .entry-desc {
+  font-size: inherit;
+  width: 100%;
+}
+
+#userpilot-resource-centre .row .entry-static-icon svg {
+  width: 100%;
+}
+
+.entry-desc:empty {
+  display: none;
+}
+
+.row.checklist-entry .entry-progress {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  color: #b9b8b8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: right;
+}
+
+[theme="dark"] .row.checklist-entry .entry-progress #completed {
+  color: white;
+}
+
+.row.checklist-entry .entry-progress #completed {
+  color: #cecece;
+}
+
+.row.checklist-entry[active] .entry-header-icon {
+  transform: rotate(-90deg);
+}
+
+#widget-content {
+  position: relative;
+  width: 100%;
+  /* transition: all .3s linear;
+  left: 0%; */
+}
+#widget-content #main-content {
+  width: 100%;
+  position: relative;
+  left: 0%;
+  overflow: auto;
+}
+
+.userpilot-resource-centre-container#home #widget-content #main-content {
+  padding-top: 10px;
+}
+
+#widget-content #main-content #help-module {
+  display: none;
+  padding-top: 10px;
+}
+
+#widget-content #main-content #help-module.article-content {
+  text-align: initial;
+  padding: 10px;
+}
+
+#widget-content #main-content #help-module.active {
+  display: block;
+}
+
+#userpilot-resource-centre
+  .userpilot-resource-centre-container.active-article
+  #widget-content
+  #main-content
+  #help-module.active {
+  display: none;
+}
+
+#search #widget-content {
+  min-height: 400px;
+}
+
+#widget-content #main-content.hidden {
+  /* visibility: hidden; */
+  left: -100%;
+}
+
+.checklistTasks {
+  width: 100%;
+  position: relative;
+  top: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  right: 0px;
+  font-weight: 600;
+  height: 0px;
+}
+.checklistTasks.active {
+  right: 0%;
+  overflow: visible;
+  top: 0px;
+  height: auto;
+}
+
+.toggled .checklistTasks {
+  height: auto;
+}
+
+#back-to-main,
+#expand {
+  z-index: 1;
+  top: -7px;
+  left: -14px;
+  width: auto;
+  color: #fff;
+  padding: 10px;
+  column-gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.widget-header div#back-to-main:hover,
+.widget-header div#expand:hover {
+  background: #00000024;
+}
+
+.widget-header#header-news div#back-to-main,
+.widget-header#header-news div#expand {
+  position: fixed;
+  left: 24px;
+  top: 12px;
+}
+
+.widget-header.announcement-header#header-news div#back-to-main,
+.widget-header.announcement-header#header-news div#expand {
+  left: 10px;
+  top: 10px;
+  padding: 10px;
+  position: fixed;
+  border-radius: 5px;
+}
+
+.widget-header.announcement-header#header-news div#expand {
+  right: 10px;
+  left: auto;
+}
+
+.widget-header#header-news div#expand {
+  left: auto;
+  right: 24px;
+}
+
+#userpilot-resource-centre .widget-header #header-container #back-to-main span {
+  position: relative;
+  top: -2px;
+  margin: 0 4px 0px 4px;
+}
+
+#userpilot-resource-centre
+  .widget-header
+  #header-container
+  #back-to-main.hidden,
+#userpilot-resource-centre .widget-header #header-container #expand.hidden {
+  display: none;
+}
+
+div#userpilot-resource-centre.submodule-open .header-text {
+  text-align: center;
+}
+
+div#userpilot-resource-centre.submodule-open .header-text #widget-title {
+  padding: 0px 20px;
+}
+
+.row.checklist-entry[active] .checklistTasks {
+  border-top: 1px solid gainsboro;
+  padding-top: 20px;
+  margin-top: 10px;
+}
+
+.list-progress-bar {
+  display: flex;
+  height: 14px;
+  padding: 3px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  width: calc(100% - 50px);
+  flex-direction: row;
+  justify-content: space-between;
+  background: #EDEDEF;
+}
+
+.list-progress-bar .list-progress-value {
+  min-width: 10px;
+  border-radius: 2rem;
+  background: rgb(252, 82, 126);
+  height: 8px;
+  width: 82%;
+  display: block;
+  transition: all 0.2s;
+}
+
+.list-progress-bar .list-text-value {
+  font-size: 14px;
+  position: absolute;
+  top: -23px;
+  right: 0px;
+  font-weight: 400;
+}
+
+#sub-modules {
+  position: relative;
+  display: none;
+}
+
+.sub-modules-container {
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  overflow: hidden;
+  box-sizing: border-box;
+  right: -100%;
+  height: 0;
+}
+
+.sub-modules-container.active {
+  right: 0%;
+  overflow: auto;
+  height: auto;
+}
+
+div#tasks-main-container {
+  width: 100%;
+  overflow: auto;
+  max-height: 100%;
+  position: relative;
+  padding-top: 50px;
+}
+
+.checklistTasks .task-content {
+  position: relative !important;
+  margin-left: 0px !important;
+}
+
+.checklistTasks .task-dropdown-controller {
+  width: auto !important;
+}
+
+.checklistTasks .task-status {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  background: none;
+  position: relative;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.checklistTasks .experience {
+  position: relative;
+  width: calc(100% - 44px) !important;
+  padding: 15px 22px 15px 15px;
+  cursor: pointer;
+  padding-left: 22px;
+  text-align: initial;
+  box-sizing: unset;
+  opacity: 1;
+  left: 0;
+  transition: opacity 0.2s linear, left 0.2s linear, right 0.2s linear;
+}
+
+#tasks-main-container > .task-item.experience::after {
+  content: "";
+  height: 50%;
+  width: 1px;
+  position: absolute;
+  left: 30px;
+  margin: auto;
+  bottom: 0px;
+  border-left: 1px solid var(--line-color);
+  z-index: 0;
+}
+
+#tasks-main-container > .task-item.experience::before {
+  content: "";
+  height: 50%;
+  width: 1px;
+  position: absolute;
+  left: 30px;
+  margin: auto;
+  top: 0px;
+  border-left: 1px solid var(--line-color);
+}
+
+
+#tasks-main-container > .task-item.experience:first-child::before {
+  border: none;
+}
+#tasks-main-container > .task-item.experience:last-child::after {
+  border: none;
+}
+
+.checklistTasks .experience.animate-in {
+  opacity: 1;
+  left: 0px;
+  right: initial;
+}
+
+.checklistTasks .task-item[chronological-disabled-step="1"] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#userpilot-resource-centre .checklistTasks .task-status > span {
+  content: " ";
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  vertical-align: middle;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.checklistTasks [task-completed] .task-status::after {
+  content: "";
+  background-image: url(https://uploads.userpilot.io/check.svg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+#userpilot-resource-centre
+  .checklistTasks
+  [task-completed]
+  .task-status
+  > span {
+  width: 18px;
+  height: 18px;
+}
+
+#userpilot-resource-centre .checklistTasks [task-completed] .task-status {
+  /* background: #E47683 !important; */
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 50%;
+  background: none;
+  border: none;
+}
+#userpilot-resource-centre .checklistTasks task-caret {
+  display: none !important;
+}
+
+#userpilot-resource-centre[theme="dark"] .checklistTasks task-title {
+  color: white;
+}
+
+#search-loading {
+  left: 0;
+  right: 0;
+  top: 50px;
+  padding: 40px;
+  display: none;
+  text-align: center;
+  position: absolute;
+}
+
+/* #search-loading>div {
+  display: inline-block;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1.5s linear infinite;
+  border-top: 8px solid rgb(66, 133, 244);
+  border-right: 8px solid rgb(52, 168, 83);
+  border-bottom: 8px solid rgb(251, 188, 4);
+  border-left: 8px solid rgb(234, 67, 53);
+}
+#search-loading.zendesk > div {
+    border-top: 8px solid #00363d;
+    border-right: 8px solid #00363d;
+    border-bottom: 8px solid #00363d;
+    border-left: 8px solid #787878;
+}  */
+
+#search-loading .search-loader-container {
+  color: #454ab8;
+  animation: 1.4s infinite linear slide-left;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+#search-loading .search-loader-container svg {
+  display: block;
+  overflow: hidden;
+}
+
+#search-loading .search-loader-container circle {
+  animation: 1.4s infinite ease-in-out slide-right;
+  stroke-dasharray: 80px, 200px;
+  stroke-dashoffset: 0;
+  stroke: currentColor;
+}
+
+@keyframes slide-left {
+  0% {
+    transform-origin: 50% 50%;
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    stroke-dasharray: 1px, 200px;
+    stroke-dashoffset: 0px;
+  }
+  50% {
+    stroke-dasharray: 100px, 200px;
+    stroke-dashoffset: -15px;
+  }
+  100% {
+    stroke-dasharray: 100px, 200px;
+    stroke-dashoffset: -125px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* End */
+/* IE & Edge support */
+< !--[if IE 11] > .rotated#userpilot-resource-centre-beacon #beacon-container {
+  transform: none;
+}
+
+< ![endif]-- > @supports (-ms-ime-align:auto) {
+  .selector {
+    property: value;
+  }
+}
+
+/* */
+
+/* Mobile view */
+
+@media only screen and (max-width: 600px) {
+  #userpilot-resource-centre:not(.preview-mode) {
+    border-radius: 0px;
+  }
+}
+
+/* *** */
+
+/* rtl rules */
+[rtl] * {
+  direction: rtl !important;
+}
+
+[rtl]#userpilot-resource-centre .row .entry-static-icon {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+[rtl]#userpilot-resource-centre
+  .widget-header#header-home.active
+  #widget-title {
+  padding-right: 0px;
+  padding-left: 24px;
+}
+
+[rtl]#userpilot-resource-centre-beacon.text-icon > div > div {
+  direction: rtl;
+  margin: 0px 0px 0px 5px;
+}
+
+[rtl]#userpilot-resource-centre .widget-header {
+  text-align: right;
+}
+
+[rtl] #back-to-main {
+  right: 0px;
+  left: initial;
+}
+[rtl] #back-to-main svg {
+  transform: rotateY(180deg);
+}
+
+[rtl]#userpilot-resource-centre #header-container #widget-close {
+  right: initial;
+  left: 0px;
+}
+
+[rtl] .widget-header.announcement-header#header-news div#back-to-main {
+  right: 10px;
+  left: initial;
+}
+
+[rtl] .widget-header.announcement-header#header-news div#expand {
+  left: 10px;
+  right: initial;
+}
+
+[rtl]#userpilot-resource-centre .row {
+  text-align: right;
+}
+
+[rtl] .row .entry-static-icon {
+  right: initial;
+  left: 50px;
+}
+
+[rtl] .row .entry-icon-container .entry-icon img {
+  margin-right: 0px;
+  margin-left: 10px;
+}
+
+[rtl] .row .entry-icon-container .entry-emoji span {
+  margin-right: 0px;
+  margin-left: 20px;
+}
+
+[rtl] .row .entry-static-icon > * {
+  float: left;
+}
+
+[rtl] .row .entry-static-icon [rtl] {
+  transform: rotateY(180deg);
+}
+
+[rtl] .checklistTasks.active {
+  right: 0%;
+}
+
+[rtl] .list-progress-bar .list-text-value {
+  right: initial;
+  left: 0px;
+}
+
+[rtl] #widget-content #main-content.hidden {
+  left: 100%;
+}
+
+[rtl] #userpilot-resource-centre #header-container #widget-close {
+  left: 0px;
+  right: initial;
+}
+
+[rtl] .sub-modules-container {
+  right: 100%;
+}
+[rtl] .sub-modules-container.active {
+  right: 0%;
+}
+
+[rtl] #resource-centre-widget-search.hidden {
+  left: 150%;
+}
+
+[rtl] #resource-centre-widget-search #widget-search {
+  padding: 8px 40px 8px 15px;
+}
+
+[rtl] .row .entry-icon-container .entry-emoji,
+[rtl] .row .entry-icon-container .entry-icon {
+  margin-right: 0px;
+  margin-left: 7px;
+}
+
+[rtl]#userpilot-resource-centre #search-icon {
+  left: initial;
+  right: 14px;
+}
+
+[rtl]#userpilot-resource-centre #search-results {
+  text-align: right;
+}
+[rtl] #search-reset-icon {
+  transform: rotateY(180deg);
+}
+
+[rtl] #internal-search-results,
+[rtl] #external-search-results {
+  text-align: right;
+}
+
+#userpilot-resource-centre[rtl]
+  .row.announcement-full-entry
+  .entry-author-icon {
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+#userpilot-resource-centre[rtl]
+  .row.announcement-full-entry
+  .entry-info
+  .entry-date {
+  direction: ltr !important;
+}
+
+#userpilot-resource-centre[rtl] .row {
+  right: -10px;
+  left: initial;
+}
+
+#userpilot-resource-centre[rtl] .row.animate-in {
+  left: initial;
+  right: 0px;
+}
+
+/* Navigation bar controller */
+
+div#navigation-bar {
+  left: 0px;
+  z-index: 1;
+  width: 100%;
+  bottom: 0px;
+  position: fixed;
+  background: white;
+  display: inline-flex;
+  justify-content: space-around;
+  border-top: 1px solid #d3d3d6;
+}
+
+div#navigation-bar .nav-controller {
+  width: 50%;
+  display: flex;
+  cursor: pointer;
+  padding: 15px 10px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div#navigation-bar .nav-controller .img {
+  position: relative;
+}
+
+div#navigation-bar .nav-controller > * {
+  display: block;
+  pointer-events: none;
+}
+
+div#navigation-bar .nav-controller > label {
+  color: black;
+  font-size: 13px;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+div#navigation-bar .nav-controller.selected .img {
+  display: none;
+}
+
+div#navigation-bar .nav-controller.selected .img.selected-state {
+  display: block;
+}
+
+div#navigation-bar .nav-controller .img.selected-state {
+  display: none;
+}
+
+#userpilot-resource-centre:not([rtl])
+  .nav-controller[unread="true"]
+  .img::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #e80400;
+  border-radius: 10px;
+  display: inline-block;
+  top: -7px;
+  margin-left: 22px;
+}
+#userpilot-resource-centre[rtl] .nav-controller[unread="true"] .img::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #e80400;
+  border-radius: 10px;
+  display: inline-block;
+  top: -6px;
+  margin-right: -33px;
+}
+
+div#userpilot-resource-centre-beacon[unread="true"]::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #e80400;
+  border-radius: 10px;
+  right: -5px;
+  top: -3px;
+}
+
+div#userpilot-resource-centre-beacon.right-side[unread="true"]::after {
+  right: auto;
+  left: -5px;
+}
+
+div#userpilot-resource-centre-beacon.icon-square[unread="true"]::after {
+  top: -7px;
+  right: -7px;
+}
+
+div#userpilot-resource-centre-beacon.right-side.icon-square[unread="true"]::after {
+  right: auto;
+  left: -7px;
+}
+</style><link rel="stylesheet" nonce="undefined" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"><style nonce="undefined" id="Open-Sans">[font='font-Open-Sans'] {font-family: 'Open Sans'}</style></head><body font="font-Open-Sans"><main><div id="mask" style="position: absolute; width: 100%; height: 100%; z-index: 0;"></div><div id="userpilot-resource-centre-beacon" tabindex="0" role="button" aria-label="Open Resource Center" aria-expanded="false" class="right-side icon-square" style="position: fixed; border: none; right: 0px; left: auto; top: 50%; transform: translateY(calc(-50% - 0.5px)); background: rgb(96, 62, 255); font-family: &quot;Open Sans&quot;; visibility: visible; opacity: 1;"> <div id="beacon-container"> <div id="beacon-icon" style="background-image: url(&quot;https://media.userpilot.io/appex/icons/beacon-info-white.png&quot;); display: block;"></div> <div id="beacon-text" style="color: rgb(255, 255, 255);"></div> </div> </div><div id="video-back-drop" style="position: absolute; width: 100%; height: 100%; z-index: -1; transition: 0.3s linear; background: rgba(118, 109, 109, 0.67); opacity: 0;"></div><div id="userpilot-resource-centre" aria-hidden="true" tabindex="-1" position="right" theme="light" style="font-family: &quot;Open Sans&quot;; background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.05);"> <div id="widget-headers" style="background-color: rgb(96, 62, 255);"> <div class="widget-header" id="header-home" aria-hidden="true" _tabindex="0"> <div id="widget-header-blur" style="background-color: rgb(255, 255, 255);"></div> <div id="header-container"> <div id="widget-close" aria-hidden="true" role="button" aria-label="close resource center" _tabindex="0"><svg viewBox="0 0 464.66 464.92" class="close-0-19-8 up-x-to-close" title="close-icon" aria-hidden="true" _tabindex="-1"><path d="M273.25,232.44,455.71,49.86A28.94,28.94,0,0,0,414.77,8.94L232.33,191.49,49.89,8.94A28.93,28.93, 0,0,0,9,8.93,28.93,28.93,0,0,0,9,49.86L191.41,232.44,9,415a28.94, 28.94,0,1,0,40.94,40.91L232.33,273.38,414.77,455.93A28.94,28.94,0,1,0,455.71,415Z" style="fill: rgb(255, 255, 255);"></path></svg></div> <div id="header-icon" style="margin: 0px;"></div> <div id="back-to-main" aria-hidden="true" class="hidden initialized" _tabindex="0"> <svg version="1.1" style="height:16px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 7.8 14" xml:space="preserve"> <path d="M0.3,7.8c-0.4-0.4-0.4-1.1,0-1.6l5.6-5.8C6.2,0,6.9-0.1,7.3,0.2c0.5,0.3,0.6,0.9,0.3,1.4L2.2,6.8
+                                c-0.1,0.1-0.1,0.3,0,0.5l5.4,5.2c0.3,0.5,0.2,1.1-0.3,1.4c-0.5,0.3-1.1,0.2-1.4-0.3L0.3,7.8z" style="fill: rgb(255, 255, 255);"></path> </svg> </div> <div aria-hidden="true" class="header-text" _tabindex="0" style="color: rgb(255, 255, 255);"> <h3 id="widget-title">Help Center</h3> <h4 id="widget-desc"></h4> <h3 id="widget-tab"></h3> </div> </div> <div id="resource-centre-widget-search"> <input id="widget-search" aria-hidden="true" placeholder="Search for help" autocomplete="off" role="textbox" aria-label="Search for help" _tabindex="0"> <div id="search-icon"> <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" title="icon" aria-hidden="true" _tabindex="-1"><path d="M19 19L12.25 12.25M13.375 7.1875C13.375 8.82853 12.7231 10.4023 11.5627 11.5627C10.4023 12.7231 8.82853 13.375 7.1875 13.375C5.54647 13.375 3.97266 12.7231 2.81228 11.5627C1.6519 10.4023 1 8.82853 1 7.1875C1 5.54647 1.6519 3.97266 2.81228 2.81228C3.97266 1.6519 5.54647 1 7.1875 1C8.82853 1 10.4023 1.6519 11.5627 2.81228C12.7231 3.97266 13.375 5.54647 13.375 7.1875Z" stroke="#A8A8AC" stroke-width="2" stroke-linecap="round"></path></svg> </div> </div> </div> <div class="widget-header" id="header-articles" aria-hidden="true" _tabindex="0"> <div id="header-container"> <div id="widget-close" aria-hidden="true" role="button" aria-label="close resource center" _tabindex="0"><svg viewBox="0 0 464.66 464.92" class="close-0-19-8 up-x-to-close" title="close-icon" aria-hidden="true" _tabindex="-1"><path d="M273.25,232.44,455.71,49.86A28.94,28.94,0,0,0,414.77,8.94L232.33,191.49,49.89,8.94A28.93,28.93, 0,0,0,9,8.93,28.93,28.93,0,0,0,9,49.86L191.41,232.44,9,415a28.94, 28.94,0,1,0,40.94,40.91L232.33,273.38,414.77,455.93A28.94,28.94,0,1,0,455.71,415Z" style="fill: rgb(255, 255, 255);"></path></svg></div> <div id="back-to-main" aria-hidden="true" class="hidden initialized" _tabindex="0"> <svg version="1.1" style="height:16px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 7.8 14" xml:space="preserve"> <path d="M0.3,7.8c-0.4-0.4-0.4-1.1,0-1.6l5.6-5.8C6.2,0,6.9-0.1,7.3,0.2c0.5,0.3,0.6,0.9,0.3,1.4L2.2,6.8
+                                c-0.1,0.1-0.1,0.3,0,0.5l5.4,5.2c0.3,0.5,0.2,1.1-0.3,1.4c-0.5,0.3-1.1,0.2-1.4-0.3L0.3,7.8z" style="fill: rgb(255, 255, 255);"></path> </svg> </div> <div aria-hidden="true" class="header-text" _tabindex="0" style="color: rgb(255, 255, 255);"> <h3 id="widget-title">Need Help?</h3> <h4 id="widget-desc">Get the help you need from our Help Center</h4> </div> </div> <div id="resource-centre-widget-search"> <input id="widget-search" placeholder="Search for help" autocomplete="off" role="textbox" aria-label="Search for help"> <div id="search-icon"> <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" title="icon" aria-hidden="true" _tabindex="-1"><path d="M19 19L12.25 12.25M13.375 7.1875C13.375 8.82853 12.7231 10.4023 11.5627 11.5627C10.4023 12.7231 8.82853 13.375 7.1875 13.375C5.54647 13.375 3.97266 12.7231 2.81228 11.5627C1.6519 10.4023 1 8.82853 1 7.1875C1 5.54647 1.6519 3.97266 2.81228 2.81228C3.97266 1.6519 5.54647 1 7.1875 1C8.82853 1 10.4023 1.6519 11.5627 2.81228C12.7231 3.97266 13.375 5.54647 13.375 7.1875Z" stroke="#A8A8AC" stroke-width="2" stroke-linecap="round"></path></svg> </div> </div> </div> <div class="widget-header" id="header-news" aria-hidden="true" _tabindex="0"> <div id="header-container"> <div id="widget-close" aria-hidden="true" role="button" aria-label="close resource center" _tabindex="0"><svg viewBox="0 0 464.66 464.92" class="close-0-19-8 up-x-to-close" title="close-icon" aria-hidden="true" _tabindex="-1"><path d="M273.25,232.44,455.71,49.86A28.94,28.94,0,0,0,414.77,8.94L232.33,191.49,49.89,8.94A28.93,28.93, 0,0,0,9,8.93,28.93,28.93,0,0,0,9,49.86L191.41,232.44,9,415a28.94, 28.94,0,1,0,40.94,40.91L232.33,273.38,414.77,455.93A28.94,28.94,0,1,0,455.71,415Z" style="fill: rgb(255, 255, 255);"></path></svg></div> <div id="expand" aria-hidden="true" class="hidden initialized" aria-label="Expand window" role="button" _tabindex="0"> <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" title="icon" aria-hidden="true" _tabindex="-1"> <path d="M20 1.25C20 0.918479 19.8683 0.600537 19.6339 0.366117C19.3995 0.131696 19.0815 0 18.75 0H12.5C12.1685 0 11.8505 0.131696 11.6161 0.366117C11.3817 0.600537 11.25 0.918479 11.25 1.25C11.25 1.58152 11.3817 1.89946 11.6161 2.13388C11.8505 2.3683 12.1685 2.5 12.5 2.5H15.7125L11.6125 6.6125C11.4953 6.7287 11.4023 6.86695 11.3389 7.01928C11.2754 7.1716 11.2428 7.33499 11.2428 7.5C11.2428 7.66501 11.2754 7.8284 11.3389 7.98072C11.4023 8.13305 11.4953 8.2713 11.6125 8.3875C11.7287 8.50466 11.867 8.59765 12.0193 8.66111C12.1716 8.72458 12.335 8.75725 12.5 8.75725C12.665 8.75725 12.8284 8.72458 12.9807 8.66111C13.133 8.59765 13.2713 8.50466 13.3875 8.3875L17.5 4.275V7.5C17.5 7.83152 17.6317 8.14946 17.8661 8.38388C18.1005 8.6183 18.4185 8.75 18.75 8.75C19.0815 8.75 19.3995 8.6183 19.6339 8.38388C19.8683 8.14946 20 7.83152 20 7.5V1.25ZM8.3875 11.6125C8.2713 11.4953 8.13305 11.4023 7.98072 11.3389C7.8284 11.2754 7.66501 11.2428 7.5 11.2428C7.33499 11.2428 7.1716 11.2754 7.01928 11.3389C6.86695 11.4023 6.7287 11.4953 6.6125 11.6125L2.5 15.7125V12.5C2.5 12.1685 2.3683 11.8505 2.13388 11.6161C1.89946 11.3817 1.58152 11.25 1.25 11.25C0.918479 11.25 0.600537 11.3817 0.366117 11.6161C0.131696 11.8505 0 12.1685 0 12.5V18.75C0 19.0815 0.131696 19.3995 0.366117 19.6339C0.600537 19.8683 0.918479 20 1.25 20H7.5C7.83152 20 8.14946 19.8683 8.38388 19.6339C8.6183 19.3995 8.75 19.0815 8.75 18.75C8.75 18.4185 8.6183 18.1005 8.38388 17.8661C8.14946 17.6317 7.83152 17.5 7.5 17.5H4.275L8.3875 13.3875C8.50466 13.2713 8.59765 13.133 8.66111 12.9807C8.72458 12.8284 8.75725 12.665 8.75725 12.5C8.75725 12.335 8.72458 12.1716 8.66111 12.0193C8.59765 11.867 8.50466 11.7287 8.3875 11.6125Z" fill="#000" style="fill: rgb(255, 255, 255);"></path> </svg> <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" title="icon" aria-hidden="true" _tabindex="-1"> <path d="M18.7457 6.25125H15.5227L19.6326 2.14129C19.8678 1.90606 20 1.58701 20 1.25434C20 0.921668 19.8678 0.602622 19.6326 0.367388C19.3974 0.132153 19.0783 0 18.7457 0C18.413 0 18.0939 0.132153 17.8587 0.367388L13.7487 4.46486V1.25434C13.7487 0.923024 13.6171 0.605278 13.3829 0.371002C13.1486 0.136726 12.8308 0.00511152 12.4995 0.00511152C12.1682 0.00511152 11.8505 0.136726 11.6162 0.371002C11.3819 0.605278 11.2503 0.923024 11.2503 1.25434V7.50048C11.2503 7.83179 11.3819 8.14954 11.6162 8.38382C11.8505 8.61809 12.1682 8.74971 12.4995 8.74971H18.7457C19.077 8.74971 19.3947 8.61809 19.629 8.38382C19.8633 8.14954 19.9949 7.83179 19.9949 7.50048C19.9949 7.16916 19.8633 6.85142 19.629 6.61714C19.3947 6.38287 19.077 6.25125 18.7457 6.25125ZM7.50261 11.2482H1.25647C0.925155 11.2482 0.60741 11.3798 0.373134 11.6141C0.138858 11.8483 0.00724345 12.1661 0.00724345 12.4974C0.00724345 12.8287 0.138858 13.1465 0.373134 13.3807C0.60741 13.615 0.925155 13.7466 1.25647 13.7466H4.46699L0.369519 17.8566C0.252431 17.9727 0.159496 18.1109 0.0960746 18.2631C0.0326529 18.4153 0 18.5786 0 18.7435C0 18.9084 0.0326529 19.0717 0.0960746 19.224C0.159496 19.3762 0.252431 19.5143 0.369519 19.6305C0.485651 19.7476 0.623817 19.8405 0.776047 19.9039C0.928277 19.9673 1.09156 20 1.25647 20C1.42138 20 1.58467 19.9673 1.7369 19.9039C1.88913 19.8405 2.02729 19.7476 2.14342 19.6305L6.25338 15.5205V18.7435C6.25338 19.0748 6.385 19.3926 6.61927 19.6269C6.85355 19.8611 7.17129 19.9928 7.50261 19.9928C7.83393 19.9928 8.15167 19.8611 8.38595 19.6269C8.62022 19.3926 8.75184 19.0748 8.75184 18.7435V12.4974C8.75184 12.1661 8.62022 11.8483 8.38595 11.6141C8.15167 11.3798 7.83393 11.2482 7.50261 11.2482Z" fill="#6765E8" style="fill: rgb(255, 255, 255);"></path> </svg> </div> <div id="back-to-main" aria-hidden="true" class="hidden initialized" aria-label="Go back" role="button" _tabindex="0"> <svg version="1.1" style="height:16px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 7.8 14" xml:space="preserve"> <path d="M0.3,7.8c-0.4-0.4-0.4-1.1,0-1.6l5.6-5.8C6.2,0,6.9-0.1,7.3,0.2c0.5,0.3,0.6,0.9,0.3,1.4L2.2,6.8
+                                c-0.1,0.1-0.1,0.3,0,0.5l5.4,5.2c0.3,0.5,0.2,1.1-0.3,1.4c-0.5,0.3-1.1,0.2-1.4-0.3L0.3,7.8z" style="fill: rgb(255, 255, 255);"></path> </svg> </div> <div aria-hidden="true" class="header-text" _tabindex="0" style="color: rgb(255, 255, 255);"> <h3 id="widget-title">Tasks</h3> <h4 id="widget-desc"></h4> </div> </div> <div id="resource-centre-widget-search"> <input id="widget-search" placeholder="Search for help" autocomplete="off" role="textbox" aria-label="Search for help"> <div id="search-icon"> <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" title="icon" aria-hidden="true" _tabindex="-1"><path d="M19 19L12.25 12.25M13.375 7.1875C13.375 8.82853 12.7231 10.4023 11.5627 11.5627C10.4023 12.7231 8.82853 13.375 7.1875 13.375C5.54647 13.375 3.97266 12.7231 2.81228 11.5627C1.6519 10.4023 1 8.82853 1 7.1875C1 5.54647 1.6519 3.97266 2.81228 2.81228C3.97266 1.6519 5.54647 1 7.1875 1C8.82853 1 10.4023 1.6519 11.5627 2.81228C12.7231 3.97266 13.375 5.54647 13.375 7.1875Z" stroke="#A8A8AC" stroke-width="2" stroke-linecap="round"></path></svg> </div> </div> </div> <div class="widget-header" id="header-search" aria-hidden="true" _tabindex="0"> <div id="header-container"> <div id="widget-close" aria-hidden="true" role="button" aria-label="close resource center" _tabindex="0"><svg viewBox="0 0 464.66 464.92" class="close-0-19-8 up-x-to-close" title="close-icon" aria-hidden="true" _tabindex="-1"><path d="M273.25,232.44,455.71,49.86A28.94,28.94,0,0,0,414.77,8.94L232.33,191.49,49.89,8.94A28.93,28.93, 0,0,0,9,8.93,28.93,28.93,0,0,0,9,49.86L191.41,232.44,9,415a28.94, 28.94,0,1,0,40.94,40.91L232.33,273.38,414.77,455.93A28.94,28.94,0,1,0,455.71,415Z" style="fill: rgb(255, 255, 255);"></path></svg></div> <div id="back-to-main" aria-hidden="true" _tabindex="0" class="initialized"> <svg version="1.1" style="height:16px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 7.8 14" xml:space="preserve"> <path d="M0.3,7.8c-0.4-0.4-0.4-1.1,0-1.6l5.6-5.8C6.2,0,6.9-0.1,7.3,0.2c0.5,0.3,0.6,0.9,0.3,1.4L2.2,6.8
+                                c-0.1,0.1-0.1,0.3,0,0.5l5.4,5.2c0.3,0.5,0.2,1.1-0.3,1.4c-0.5,0.3-1.1,0.2-1.4-0.3L0.3,7.8z" style="fill: rgb(255, 255, 255);"></path> </svg> </div> <div aria-hidden="true" class="header-text" _tabindex="0" style="color: rgb(255, 255, 255);"> <h3 id="widget-title">Search</h3> </div> </div> <div id="resource-centre-widget-search"> <input id="widget-search" placeholder="Search for help" autocomplete="off" role="textbox" aria-label="Search for help"> <div id="search-icon"> <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" title="icon" aria-hidden="true" _tabindex="-1"><path d="M19 19L12.25 12.25M13.375 7.1875C13.375 8.82853 12.7231 10.4023 11.5627 11.5627C10.4023 12.7231 8.82853 13.375 7.1875 13.375C5.54647 13.375 3.97266 12.7231 2.81228 11.5627C1.6519 10.4023 1 8.82853 1 7.1875C1 5.54647 1.6519 3.97266 2.81228 2.81228C3.97266 1.6519 5.54647 1 7.1875 1C8.82853 1 10.4023 1.6519 11.5627 2.81228C12.7231 3.97266 13.375 5.54647 13.375 7.1875Z" stroke="#A8A8AC" stroke-width="2" stroke-linecap="round"></path></svg> </div> </div> </div> </div> <div class="userpilot-resource-centre-container active" id="home" aria-hidden="true" _tabindex="0"> <div id="widget-content" aria-hidden="true" role="dialog" aria-label="entering resource center home" _tabindex="-1"> <div id="main-content" role="dialog" aria-label="Resource center home modules"><div class="row icon-with-text animate-in" aria-hidden="true" aria-label="Help Center" role="link" type="link" entry-id="0" _tabindex="0"> <div class="entry-icon-container"> <div class="entry-emoji"></div> <div class="entry-icon"></div> </div> <div class="entry-text" style="color: rgb(0, 0, 0);"> <div class="entry-title">Help Center</div> <div class="entry-desc"></div> </div> <span class="entry-static-icon"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.75 7.25L16 1" stroke="#00000038" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M11.8333 1H15.9999V5.16667" stroke="#00000038" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M16 10.1667V14.3333C16 14.7754 15.8244 15.1993 15.5118 15.5118C15.1993 15.8244 14.7754 16 14.3333 16H2.66667C2.22464 16 1.80072 15.8244 1.48816 15.5118C1.17559 15.1993 1 14.7754 1 14.3333V2.66667C1 2.22464 1.17559 1.80072 1.48816 1.48816C1.80072 1.17559 2.22464 1 2.66667 1H6.83333" stroke="#00000038" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></div> <div id="sub-modules"></div> </div> </div> <div class="userpilot-resource-centre-container" id="articles" aria-hidden="true" _tabindex="0"> <div id="widget-content" aria-hidden="true" role="dialog" aria-label="entering resource center help" _tabindex="-1"> <div id="main-content" role="dialog" aria-label="Resource center help articles"></div> </div> </div> <div class="userpilot-resource-centre-container" id="news" aria-hidden="true" _tabindex="0"> <div id="widget-content" aria-hidden="true" role="dialog" aria-label="entering resource center news" _tabindex="-1"> <div id="main-content" role="dialog" aria-label="Resource center news posts"></div> </div> </div> <div class="userpilot-resource-centre-container" aria-hidden="true" id="search" _tabindex="-1"> <div id="empty-results-page"> <div id="width-100"><span class="no-results-header" style="color: rgb(0, 0, 0);">No Results Found...</span> <span class="no-results-subheader" style="color: rgb(0, 0, 0);">We tried looking but couldn't find anything...</span></div> <div id="go-home" style="background-color: rgb(96, 62, 255); color: rgb(255, 255, 255);">Go Home</div> </div> <div id="widget-content"> <div id="main-content"> <div class="search-results" id="modules"> <div class="results"></div> </div> <div class="search-results" id="news"> <div class="results"></div> </div> <div class="search-results" id="articles"> <div class="results"></div> <div id="search-loading"> <div class="search-loader-container" role="progressbar" style="color: rgb(96, 62, 255);"> <svg viewBox="22 22 44 44"> <circle cx="44" cy="44" r="20.2" fill="none" stroke-width="3.6"></circle> </svg> </div> </div> </div> </div> </div> </div> <div id="navigation-bar" aria-hidden="true" role="tablist" _tabindex="-1" style="background-color: rgb(255, 255, 255);"> <div class="nav-controller selected" aria-hidden="true" tab="home" role="tab" aria-label="Home" aria-selected="false" _tabindex="0"> <div class="img"> <svg width="21" height="20" viewBox="0 0 21 20" title="nav" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" _tabindex="-1"> <path d="M2.09532 18.7332H7.36961V11.7782C7.36961 11.502 7.59346 11.2782 7.86961 11.2782H13.4639C13.74 11.2782 13.9639 11.502 13.9639 11.7782V18.7332H19.2382V7.33215L10.6667 1.58348L2.09532 7.33215V18.7332ZM1.66675 20C1.11446 20 0.666748 19.5523 0.666748 19V7.23252C0.666748 6.89895 0.83307 6.58734 1.1102 6.4017L10.1102 0.372816C10.4469 0.147239 10.8865 0.147239 11.2233 0.372816L20.2233 6.4017C20.5004 6.58734 20.6667 6.89895 20.6667 7.23252V19C20.6667 19.5523 20.219 20 19.6667 20H13.5353C12.983 20 12.5353 19.5523 12.5353 19V13.045C12.5353 12.7688 12.3115 12.545 12.0353 12.545H9.29818C9.02203 12.545 8.79818 12.7688 8.79818 13.045V19C8.79818 19.5523 8.35046 20 7.79818 20H1.66675Z" fill="#282829" style="fill: rgb(11, 35, 109);"></path> </svg> </div> <div class="img selected-state"> <svg width="21" height="20" viewBox="0 0 21 20" title="nav" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" _tabindex="-1"> <path d="M1.66675 20C1.11446 20 0.666748 19.5523 0.666748 19V7.23252C0.666748 6.89895 0.83307 6.58734 1.1102 6.4017L10.1102 0.372816C10.4469 0.147239 10.8865 0.147239 11.2233 0.372816L20.2233 6.4017C20.5004 6.58734 20.6667 6.89895 20.6667 7.23252V19C20.6667 19.5523 20.219 20 19.6667 20H14.2496C13.6973 20 13.2496 19.5523 13.2496 19V12.4116C13.2496 12.1354 13.0257 11.9116 12.7496 11.9116H8.58389C8.30775 11.9116 8.08389 12.1354 8.08389 12.4116V19C8.08389 19.5523 7.63618 20 7.08389 20H1.66675Z" fill="#6765E8" style="fill: rgb(11, 35, 109);"></path> </svg> </div> <label style="color: rgb(11, 35, 109);">Home</label> </div> <div class="nav-controller" aria-hidden="true" tab="articles" role="tab" aria-label="Help Center" aria-selected="false" _tabindex="0"> <div class="img"> <svg width="20" height="20" viewBox="0 0 20 20" title="nav" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" _tabindex="-1"> <path d="M9.03606 6.21976C8.84119 6.35639 8.68496 6.54286 8.58305 6.76047C8.49659 6.92235 8.3519 7.04369 8.17945 7.09893C8.007 7.15416 7.82026 7.13899 7.65857 7.05661C7.49687 6.97422 7.37284 6.83105 7.31261 6.65726C7.25237 6.48346 7.26063 6.29261 7.33564 6.1249C7.52168 5.74356 7.81284 5.34134 8.26306 5.03589C8.717 4.72569 9.29094 4.54545 9.99417 4.54545C10.6063 4.54545 11.2676 4.73043 11.7932 5.13265C12.0862 5.35108 12.3238 5.63771 12.4863 5.96871C12.6487 6.2997 12.7313 6.66547 12.7271 7.03557C12.7271 8.01549 12.2499 8.66719 11.7718 9.13676C11.5951 9.31036 11.4006 9.47636 11.2332 9.61866L11.0965 9.73534C10.953 9.85501 10.8178 9.98465 10.6918 10.1233V11.4229C10.6918 11.6116 10.6183 11.7926 10.4875 11.926C10.3567 12.0594 10.1792 12.1344 9.99417 12.1344C9.80914 12.1344 9.63169 12.0594 9.50086 11.926C9.37002 11.7926 9.29652 11.6116 9.29652 11.4229V10.0256C9.29652 9.80079 9.35884 9.54751 9.52628 9.32743C9.73093 9.06182 9.97836 8.837 10.1942 8.65012L10.3644 8.50498L10.3653 8.50403C10.5253 8.36838 10.6667 8.2479 10.8025 8.1132C11.1448 7.77644 11.3318 7.47194 11.3318 7.03557C11.3359 6.8864 11.3038 6.73851 11.2382 6.60509C11.1726 6.47168 11.0757 6.3569 10.956 6.27099C10.7067 6.08032 10.3514 5.96838 9.99417 5.96838C9.53465 5.96838 9.23699 6.08316 9.03606 6.21976ZM10.9244 14.5059C10.9244 14.7575 10.8264 14.9988 10.6519 15.1767C10.4775 15.3546 10.2409 15.4545 9.99417 15.4545C9.74747 15.4545 9.51087 15.3546 9.33642 15.1767C9.16197 14.9988 9.06397 14.7575 9.06397 14.5059C9.06397 14.2543 9.16197 14.0131 9.33642 13.8352C9.51087 13.6573 9.74747 13.5573 9.99417 13.5573C10.2409 13.5573 10.4775 13.6573 10.6519 13.8352C10.8264 14.0131 10.9244 14.2543 10.9244 14.5059Z" fill="#282829" style="fill: rgb(11, 35, 109);"></path> <path d="M10 0C15.5227 0 20 4.47727 20 10C20 15.5227 15.5227 20 10 20C4.47727 20 0 15.5227 0 10C0 4.47727 4.47727 0 10 0ZM1.36364 10C1.36364 12.2905 2.27354 14.4872 3.89317 16.1068C5.5128 17.7265 7.70949 18.6364 10 18.6364C12.2905 18.6364 14.4872 17.7265 16.1068 16.1068C17.7265 14.4872 18.6364 12.2905 18.6364 10C18.6364 7.70949 17.7265 5.5128 16.1068 3.89317C14.4872 2.27354 12.2905 1.36364 10 1.36364C7.70949 1.36364 5.5128 2.27354 3.89317 3.89317C2.27354 5.5128 1.36364 7.70949 1.36364 10Z" fill="#282829" style="fill: rgb(11, 35, 109);"></path> </svg> </div> <div class="img selected-state"> <svg width="20" height="20" viewBox="0 0 20 20" title="nav" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" _tabindex="-1"> <path d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z" fill="#6765E8" style="fill: rgb(11, 35, 109);"></path> <path d="M9.03606 6.21976C8.84119 6.35639 8.68496 6.54285 8.58305 6.76047C8.49659 6.92235 8.3519 7.04369 8.17945 7.09893C8.007 7.15416 7.82026 7.13899 7.65857 7.05661C7.49687 6.97422 7.37284 6.83105 7.31261 6.65726C7.25237 6.48346 7.26063 6.29261 7.33564 6.1249C7.52168 5.74356 7.81284 5.34134 8.26306 5.03589C8.717 4.72569 9.29094 4.54545 9.99417 4.54545C10.6063 4.54545 11.2676 4.73043 11.7932 5.13265C12.0862 5.35108 12.3238 5.63771 12.4863 5.96871C12.6487 6.2997 12.7313 6.66547 12.7271 7.03557C12.7271 8.01549 12.2499 8.66719 11.7718 9.13676C11.5951 9.31036 11.4006 9.47636 11.2332 9.61866L11.0965 9.73534C10.953 9.85501 10.8178 9.98465 10.6918 10.1233V11.4229C10.6918 11.6116 10.6183 11.7926 10.4875 11.926C10.3567 12.0594 10.1792 12.1344 9.99417 12.1344C9.80914 12.1344 9.63169 12.0594 9.50086 11.926C9.37002 11.7926 9.29652 11.6116 9.29652 11.4229V10.0256C9.29652 9.80079 9.35884 9.54751 9.52628 9.32743C9.73092 9.06182 9.97836 8.837 10.1942 8.65012L10.3644 8.50498L10.3653 8.50403C10.5253 8.36838 10.6667 8.2479 10.8025 8.1132C11.1448 7.77644 11.3318 7.47194 11.3318 7.03557C11.3359 6.8864 11.3038 6.73851 11.2382 6.60509C11.1726 6.47168 11.0757 6.3569 10.956 6.27099C10.7067 6.08032 10.3514 5.96838 9.99417 5.96838C9.53465 5.96838 9.23699 6.08316 9.03606 6.21976ZM10.9244 14.5059C10.9244 14.7575 10.8264 14.9988 10.6519 15.1767C10.4775 15.3546 10.2409 15.4545 9.99417 15.4545C9.74747 15.4545 9.51087 15.3546 9.33642 15.1767C9.16197 14.9988 9.06397 14.7575 9.06397 14.5059C9.06397 14.2543 9.16197 14.0131 9.33642 13.8352C9.51087 13.6573 9.74747 13.5573 9.99417 13.5573C10.2409 13.5573 10.4775 13.6573 10.6519 13.8352C10.8264 14.0131 10.9244 14.2543 10.9244 14.5059Z" fill="white" style="fill: rgb(255, 255, 255);"></path> </svg> </div> <label style="color: rgb(11, 35, 109);">Help Center</label> </div> <div class="nav-controller" aria-hidden="true" tab="news" role="tab" aria-label="News" aria-selected="false" _tabindex="0" style="display: none;"> <div class="img"> <svg width="21" height="20" viewBox="0 0 21 18" title="nav" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" _tabindex="-1"> <path d="M2.64118 6.96782V6.33252H2.00016V5.44337H0.718106V12.5566H2.00016V11.6674H2.64118V11.0321L3.92323 11.5403V14.3349C3.92323 14.8065 4.05831 15.2589 4.29874 15.5924C4.53917 15.9259 4.86526 16.1132 5.20529 16.1132H7.76939C8.10941 16.1132 8.4355 15.9259 8.67593 15.5924C8.91637 15.2589 9.05144 14.8065 9.05144 14.3349V13.5729L18.5963 17.3555C19.2503 17.6147 19.9489 17.1063 19.9489 16.3711V1.62889C19.9489 0.893727 19.2503 0.385299 18.5963 0.644485L2.64118 6.96782ZM8.41041 14.3349C8.41041 14.8253 8.12259 15.2241 7.76939 15.2241H5.20529C4.85176 15.2241 4.56426 14.8253 4.56426 14.3349V11.7946L8.41041 13.3191V14.3349ZM19.3078 16.713L2.64118 10.1074V7.89254L19.3078 1.28746V16.713Z" fill="#282829" style="fill: rgb(11, 35, 109);"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M2.64118 6.96782V6.33252H2.00016V5.44337H0.718106V12.5566H2.00016V11.6674H2.64118V11.0321L3.92323 11.5403V14.3349C3.92323 14.8065 4.05831 15.2589 4.29874 15.5924C4.53917 15.9259 4.86526 16.1132 5.20529 16.1132H7.76939C8.10941 16.1132 8.4355 15.9259 8.67593 15.5924C8.91637 15.2589 9.05144 14.8065 9.05144 14.3349V13.5729L18.5963 17.3555C19.2503 17.6147 19.9489 17.1063 19.9489 16.3711V1.62889C19.9489 0.893727 19.2503 0.385299 18.5963 0.644485L2.64118 6.96782ZM3.0258 6.39184L18.9809 0.0685033C19.6349 -0.190683 20.3335 0.317744 20.3335 1.0529V16.9471C20.3335 17.6822 19.6349 18.1907 18.981 17.9315L9.43606 14.1489V14.3349C9.43606 14.8792 9.28106 15.4169 8.985 15.8276C8.68744 16.2403 8.25504 16.5084 7.76939 16.5084H5.20529C4.71964 16.5084 4.28724 16.2403 3.98968 15.8276C3.69363 15.4169 3.53862 14.8792 3.53862 14.3349V11.8114L3.0258 11.6082C3.0258 11.8592 2.83238 12.0626 2.59378 12.0626H2.38478C2.38478 12.5537 2.00635 12.9518 1.53953 12.9518H1.3335C0.781211 12.9518 0.333496 12.4808 0.333496 11.8998V6.10014C0.333496 5.51917 0.781212 5.04819 1.3335 5.04819H1.53953C2.00635 5.04819 2.38478 5.44628 2.38478 5.93735H2.59376C2.83237 5.93735 3.0258 6.14083 3.0258 6.39184ZM7.91334 14.7281C7.97576 14.6415 8.0258 14.5036 8.0258 14.3349V13.5902L4.94888 12.3706V14.3349C4.94888 14.5038 4.9989 14.6416 5.06127 14.7282C5.1238 14.8149 5.17914 14.8289 5.20529 14.8289H7.76939C7.79532 14.8289 7.8507 14.815 7.91334 14.7281ZM4.56426 14.3349C4.56426 14.8253 4.85176 15.2241 5.20529 15.2241H7.76939C8.12259 15.2241 8.41041 14.8253 8.41041 14.3349V13.3191L4.56426 11.7946V14.3349ZM19.3078 16.713V1.28746L2.64118 7.89254V10.1074L19.3078 16.713ZM18.9232 16.137V1.86345L3.0258 8.16368V9.83631L18.9232 16.137Z" fill="#282829" style="fill: rgb(11, 35, 109);"></path> </svg> </div> <div class="img selected-state"> <svg width="21" height="20" viewBox="0 0 21 18" title="nav" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" _tabindex="-1"> <path d="M2.33398 7L19.834 1L19.334 16.5L2.33398 10V7Z" fill="#6765E8" style="fill: rgb(11, 35, 109);"></path> <path d="M2.64167 6.96782V6.33252H2.00065V5.44337H0.718594V12.5566H2.00065V11.6674H2.64167V11.0321L3.92372 11.5403V14.3349C3.92372 14.8065 4.05879 15.2589 4.29923 15.5924C4.53966 15.9259 4.86575 16.1132 5.20577 16.1132H7.76988C8.1099 16.1132 8.43599 15.9259 8.67642 15.5924C8.91685 15.2589 9.05193 14.8065 9.05193 14.3349V13.5729L18.5968 17.3555C19.2508 17.6147 19.9494 17.1063 19.9494 16.3711V1.62889C19.9494 0.893727 19.2508 0.385299 18.5968 0.644485L2.64167 6.96782ZM8.4109 14.3349C8.4109 14.8253 8.12308 15.2241 7.76988 15.2241H5.20577C4.85225 15.2241 4.56475 14.8253 4.56475 14.3349V11.7946L8.4109 13.3191V14.3349ZM19.3083 16.713L2.64167 10.1074V7.89254L19.3083 1.28746V16.713Z" fill="#6765E8" style="fill: rgb(11, 35, 109);"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M2.64167 6.96782V6.33252H2.00065V5.44337H0.718594V12.5566H2.00065V11.6674H2.64167V11.0321L3.92372 11.5403V14.3349C3.92372 14.8065 4.05879 15.2589 4.29923 15.5924C4.53966 15.9259 4.86575 16.1132 5.20577 16.1132H7.76988C8.1099 16.1132 8.43599 15.9259 8.67642 15.5924C8.91685 15.2589 9.05193 14.8065 9.05193 14.3349V13.5729L18.5968 17.3555C19.2508 17.6147 19.9494 17.1063 19.9494 16.3711V1.62889C19.9494 0.893727 19.2508 0.385299 18.5968 0.644485L2.64167 6.96782ZM3.02629 6.39184L18.9814 0.0685033C19.6354 -0.190683 20.334 0.317744 20.334 1.0529V16.9471C20.334 17.6822 19.6354 18.1907 18.9814 17.9315L9.43655 14.1489V14.3349C9.43655 14.8792 9.28154 15.4169 8.98549 15.8276C8.68793 16.2403 8.25553 16.5084 7.76988 16.5084H5.20578C4.72013 16.5084 4.28773 16.2403 3.99017 15.8276C3.69412 15.4169 3.53911 14.8792 3.53911 14.3349V11.8114L3.02629 11.6082C3.02629 11.8592 2.83287 12.0626 2.59426 12.0626H2.38527C2.38527 12.5537 2.00684 12.9518 1.54002 12.9518H1.33398C0.781699 12.9518 0.333984 12.4808 0.333984 11.8998V6.10014C0.333984 5.51917 0.7817 5.04819 1.33398 5.04819H1.54002C2.00684 5.04819 2.38527 5.44628 2.38527 5.93735H2.59424C2.83286 5.93735 3.02629 6.14083 3.02629 6.39184ZM7.91382 14.7281C7.97625 14.6415 8.02629 14.5036 8.02629 14.3349V13.5902L4.94937 12.3706V14.3349C4.94937 14.5038 4.99938 14.6416 5.06176 14.7282C5.12429 14.8149 5.17963 14.8289 5.20578 14.8289H7.76988C7.79581 14.8289 7.85119 14.815 7.91382 14.7281ZM4.56475 14.3349C4.56475 14.8253 4.85225 15.2241 5.20577 15.2241H7.76988C8.12308 15.2241 8.4109 14.8253 8.4109 14.3349V13.3191L4.56475 11.7946V14.3349ZM19.3083 16.713V1.28746L2.64167 7.89254V10.1074L19.3083 16.713ZM18.9237 16.137V1.86345L3.02629 8.16368V9.83631L18.9237 16.137Z" fill="#6765E8" style="fill: rgb(11, 35, 109);"></path> </svg> </div> <label style="color: rgb(11, 35, 109);">News</label> </div> </div> </div></main></body></html>

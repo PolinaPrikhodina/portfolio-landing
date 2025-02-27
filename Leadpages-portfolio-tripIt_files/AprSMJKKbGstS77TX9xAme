@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="116px" height="117px" viewBox="0 0 116 117" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>assets/btn-play</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M50,101 C22.3857625,101 0,78.3903799 0,50.5 C0,22.6096201 22.3857625,0 50,0 C77.6142375,0 100,22.6096201 100,50.5 C100,78.3903799 77.6142375,101 50,101 Z M54.524162,58.7027222 L65.6871254,52.7522425 C67.1559712,51.9692661 67.1472731,50.7094306 65.6841935,49.929528 L40.9824731,36.7621387 C39.518609,35.9818178 38.3333333,36.6971368 38.3333333,38.3589144 L38.3333333,64.324419 C38.3333333,65.9997688 39.5222215,66.6995899 40.9887893,65.9178278 L54.524162,58.7027222 Z" id="path-1"></path>
+        <filter x="-13.0%" y="-10.9%" width="126.0%" height="125.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="TripIt.com" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="index" transform="translate(-902.000000, -3784.000000)">
+            <g id="-" transform="translate(0.000000, 3534.000000)">
+                <g id="assets/btn-play" transform="translate(910.000000, 256.000000)">
+                    <g id="Combined-Shape">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
